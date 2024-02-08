@@ -4,6 +4,9 @@ import Profile from './Profile/Profile.jsx';
 import data from '../data/data.json';
 import Statistics from './Statistics/Statistics.jsx';
 
+import friends from '../data/friends.json';
+import FriendList from './FriendList/FriendList.jsx';
+
 export default function App() {
   return (
     <>
@@ -14,7 +17,8 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data} />
+      <Statistics title="Upload stats" stats={data} />;
+      <FriendList friends={friends} />;
     </>
   );
 }
